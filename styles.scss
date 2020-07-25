@@ -1,3 +1,6 @@
+$backgroundblue: #4884C4;
+$yellowporccionne: #ecda2c;
+
 * {
     padding: 0;
     margin: 0;
@@ -5,17 +8,78 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     width: 100%;
     height: 100vh;
 
-    background: #ff4b1f;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ff9068, #ff4b1f);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ff9068, #ff4b1f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    //color: #000000;
+    background: $backgroundblue;
+    font-family: 'Open Sans', sans-serif;
     color: #FFFFFF;
+}
+
+textarea {
+    resize: none;
+    outline: none;
+    padding: 10px;
+    border: none;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header {
+        margin: 20px;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .logo {
+            max-width: 100%;
+        }
+
+        .subtitulo {
+            margin-top: 30px;
+            font-size: 2em;
+            font-weight: 400;
+        }
+    }
+    .inicial {
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content: center;
+        
+        p{
+            max-width: 280px;
+            
+            margin-bottom: 30px;
+        }
+
+        .textarea-input {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 40px;
+    
+    bottom: 0;
+    text-align: center;
+
+    background-color: $yellowporccionne;
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
