@@ -6,6 +6,98 @@
 }
 
 body {
+  width: 100%;
+  height: 100vh;
+  background: #4884C4;
+  font-family: 'Open Sans', sans-serif;
+  color: #FFFFFF;
+}
+
+textarea {
+  resize: none;
+  outline: none;
+  padding: 10px;
+  border: none;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .header {
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .header .logo {
+  max-width: 100%;
+}
+
+.container .header .subtitulo {
+  margin-top: 30px;
+  font-size: 2em;
+  font-weight: 400;
+}
+
+.container .inicial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .inicial p {
+  max-width: 280px;
+  margin-bottom: 30px;
+}
+
+.container .inicial .textarea-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer {
+  width: 100%;
+  height: 40px;
+  bottom: 0;
+  text-align: center;
+  background-color: #ecda2c;
+  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,14 +107,5 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  height: 100vh;
-  background: #ff4b1f;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#ff9068), to(#ff4b1f));
-  background: linear-gradient(to right, #ff9068, #ff4b1f);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: #FFFFFF;
 }
 /*# sourceMappingURL=styles.css.map */
