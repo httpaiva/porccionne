@@ -37,7 +37,7 @@ export default function Home() {
                   id="textarea"
                   cols="30"
                   rows="10"
-                  autofocus
+                  autoFocus
                   required
                 />
                 <button className="continuar">Continuar</button>
@@ -60,6 +60,14 @@ export default function Home() {
               <button className="porccionar"></button>
             </div>
           </form>
+          <div className="resultado-container">
+            <h1>Sua receita porccionnada!</h1>
+            <div className="resultado">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Maiores fuga odit, vitae inventore, incidunt, exercitationem suscipit quisquam adipisci perferendis voluptatibus aut recusandae totam ipsum ipsam! 
+                Quaerat rerum veniam ducimus assumenda!</p>
+            </div>
+          </div>
         </main>
       </div >
       <footer className="footer">

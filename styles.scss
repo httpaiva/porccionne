@@ -160,6 +160,34 @@ button {
             background-color: $darkerred;
         }
     }
+
+    .resultado-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            margin-top: 50px;
+            font-size: 2em;
+            font-weight: 400;
+            color: $yellowporccionne;
+        }
+
+        .resultado {
+            margin: 30px 10px;
+
+            min-width: 350px;
+            min-height: 50px;
+            max-width: 500px;
+            background-color: $yellowporccionne;
+            border-radius: 20px;
+
+            color: #000;
+            text-align: center;
+
+            padding: 20px;
+        }
+    }
 }
 
 .footer {
