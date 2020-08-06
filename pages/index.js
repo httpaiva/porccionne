@@ -1,7 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Head from 'next/head';
 
+// Components:
+import ResultadoBox from '../components/resultado';
+//Functions:
+import splitText from '../utils/SplitText';
+
 export default function Home() {
+
+  const [receita, setReceita] = useState('');
+  const [resultado, setResultado] = useState('');
+
+  function handleFormReceita(e) {
+    e.preventDefault();
+
+    const receitaSeparada = JSON.stringify(splitText(receita));
+    setResultado(<ResultadoBox text={receitaSeparada} />);
+  }
 
   return (
     <div className="wrapper">
@@ -24,12 +39,12 @@ export default function Home() {
           <h1 className="subtitulo">Produza suas receitas conosco</h1>
         </header>
         <main>
-          <form id="form1" >
+          <form id="form1" onSubmit={handleFormReceita} >
             <div className="formulario1">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque dui vitae amet tortor. Imperdiet auctor faucibus aliquam etiam eu in tellus sit id. Curabitur donec varius dolor fringilla morbi nisl. Quis pretium, pretium turpis lorem pretium fringilla massa. Sapien vel proin enim, adipiscing amet. Dignissim et risus amet, nisl, tortor quis ipsum est. Dui convallis eget nibh ac.
                 Curabitur donec varius dolor fringilla morbi nisl. Quis pretium, pretium turpis lorem pretium fringilla massa. Sapien vel proin enim, adipiscing amet.
-            </p>
+              </p>
               <div className="textarea-input">
                 <textarea
                   placeholder="Cole sua receita aqui"
@@ -39,35 +54,28 @@ export default function Home() {
                   rows="10"
                   autoFocus
                   required
+                  value={receita}
+                  onChange={e => setReceita(e.target.value)}
                 />
-                <button className="continuar">Continuar</button>
+                {/* <button type="submit" className="continuar">Continuar</button> */}
               </div>
             </div>
-          </form>
-          <form id="form2" >
             <div className="formulario2" >
-              <div className="linha-receita">
+              {/* <div className="linha-receita">
                 <input type="number" name="quantidade" id="quantidade" min="1" max="100000" />
                 <input type="text" id="unidade" />
                 <input type="text" id="ingrediente" />
-              </div>
+              </div> */}
               <div className="rendimento">
                 <label htmlFor="rende">Quanto a receita rende:</label>
-                <input type="number" name="rende" id="rende" min="1" max="1000" />
+                <input type="number" name="rende" id="rende" min="1" max="1000" required />
                 <label htmlFor="vairender">Quanto ela deve render:</label>
-                <input type="number" name="vairender" id="vairender" min="1" max="1000" />
+                <input type="number" name="vairender" id="vairender" min="1" max="1000" required />
               </div>
-              <button className="porccionar"></button>
+              <button type="submit" className="porccionar" form="form1"></button>
             </div>
           </form>
-          <div className="resultado-container">
-            <h1>Sua receita porccionnada!</h1>
-            <div className="resultado">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                Maiores fuga odit, vitae inventore, incidunt, exercitationem suscipit quisquam adipisci perferendis voluptatibus aut recusandae totam ipsum ipsam! 
-                Quaerat rerum veniam ducimus assumenda!</p>
-            </div>
-          </div>
+          {resultado}
         </main>
       </div >
       <footer className="footer">
