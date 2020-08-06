@@ -1,4 +1,4 @@
-function SplitText(text) {
+export default function SplitText(text) {
     let receitas = text.split('\n');
     let resultado = []
     for (var i = 0; i < receitas.length; i++) {
