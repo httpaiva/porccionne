@@ -5,17 +5,23 @@ import Head from 'next/head';
 import ResultadoBox from '../components/resultado';
 //Functions:
 import splitText from '../utils/SplitText';
+import calculo from '../utils/Calculo';
+import montaReceita from '../utils/MontaReceita';
 
 export default function Home() {
 
   const [receita, setReceita] = useState('');
+  const [rende, setRende] = useState(0);
+  const [vaiRender, setVaiRender] = useState(0);
   const [resultado, setResultado] = useState('');
 
   function handleFormReceita(e) {
     e.preventDefault();
 
-    const receitaSeparada = JSON.stringify(splitText(receita));
-    setResultado(<ResultadoBox text={receitaSeparada} />);
+    const receitaSeparada = splitText(receita);
+    const receitaCalculada = calculo(receitaSeparada, rende, vaiRender);
+    const texto = montaReceita(receitaCalculada);
+    setResultado(<ResultadoBox text={texto} />);
   }
 
   return (
@@ -68,9 +74,9 @@ export default function Home() {
               </div> */}
               <div className="rendimento">
                 <label htmlFor="rende">Quanto a receita rende:</label>
-                <input type="number" name="rende" id="rende" min="1" max="1000" required />
+                <input type="number" value={rende} name="rende" id="rende" min="1" max="1000" required onChange={e => setRende(e.target.value)}/>
                 <label htmlFor="vairender">Quanto ela deve render:</label>
-                <input type="number" name="vairender" id="vairender" min="1" max="1000" required />
+                <input type="number" value={vaiRender} name="vairender" id="vairender" min="1" max="1000" required onChange={e => setVaiRender(e.target.value)}/>
               </div>
               <button type="submit" className="porccionar" form="form1"></button>
             </div>
