@@ -28,7 +28,7 @@ export default function Home() {
     <div className="wrapper">
       <div className="container">
         <Head>
-          <title>Porccionnne!</title>
+          <title>Porccionnne! Calculadora de receitas.</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <meta name="keywords" content="porccionne, calculadora, receitas, porções" />
           <meta
@@ -38,18 +38,18 @@ export default function Home() {
             ou calcular a receita de bolo para toda a sua família."
           />
           <meta name="robots" content="index, follow" />
+          <meta name="google-site-verification" content="So7SQcaOQN7J0n4OJtIkzjYq09TJqFj40y-MUhIoXpQ" />
           <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"></link>
         </Head>
         <header className="header">
           <img className="logo" src={require('../img/logo.svg')} alt="Porccionne Logo" />
-          <h1 className="subtitulo">Produza suas receitas conosco</h1>
+          <h1 className="subtitulo">Calcule e produza suas receitas</h1>
         </header>
         <main>
           <form id="form1" onSubmit={handleFormReceita} >
             <div className="formulario1">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque dui vitae amet tortor. Imperdiet auctor faucibus aliquam etiam eu in tellus sit id. Curabitur donec varius dolor fringilla morbi nisl. Quis pretium, pretium turpis lorem pretium fringilla massa. Sapien vel proin enim, adipiscing amet. Dignissim et risus amet, nisl, tortor quis ipsum est. Dui convallis eget nibh ac.
-                Curabitur donec varius dolor fringilla morbi nisl. Quis pretium, pretium turpis lorem pretium fringilla massa. Sapien vel proin enim, adipiscing amet.
+                Quer adaptar aquela receita deliciosa para servir vários amigos ou somente para um jantar a dois? Com o <strong>Porccionne</strong> você consegue. <br></br> Cole sua receita, escolha o número de porções e bon appétit!
               </p>
               <div className="textarea-input">
                 <textarea
