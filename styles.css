@@ -17,6 +17,7 @@ textarea {
   resize: none;
   outline: none;
   padding: 10px;
+  margin: 0;
   border: none;
   border-radius: 10px;
 }
@@ -64,19 +65,8 @@ button {
   font-weight: 400;
 }
 
-.container .formulario1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.container .formulario1 p {
-  max-width: 280px;
+.container .descricao {
+  max-width: 654px;
   margin: 0 30px;
   margin-bottom: 30px;
   padding: 10px;
@@ -84,55 +74,48 @@ button {
   border-radius: 10px;
 }
 
-.container .formulario1 .textarea-input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-@media (max-width: 628px) {
-  .container .formulario1 .textarea-input {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-.container .formulario1 .textarea-input textarea {
-  height: 300px;
-}
-
-.container .formulario1 .textarea-input .continuar {
-  width: 105px;
-  height: 45px;
-  margin-top: 45px;
-  background-color: #FFF;
-  font-size: 18px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
-}
-
-.container .formulario1 .textarea-input .continuar:hover {
-  background-color: #ecda2c;
-}
-
-.container .formulario2 {
-  margin-top: 25px;
+.container .formulario {
+  max-width: 654px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  min-height: 280px;
+}
+
+@media (max-width: 700px) {
+  .container .formulario textarea {
+    margin: 0 10px;
+    min-height: 300px;
+  }
+  .container .formulario .rendimento {
+    margin: 0 10px;
+    min-height: 300px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 609px) {
+  .container .formulario {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.container .formulario textarea {
+  min-height: 100%;
+}
+
+.container .formulario .rendimento {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -140,51 +123,24 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.container .formulario2 input {
+.container .formulario .rendimento input {
+  width: 170px;
   height: 45px;
   outline: none;
   border-radius: 10px;
   border: 1px solid #EEE;
-  margin: 5px;
   font-size: 18px;
   text-align: center;
 }
 
-.container .formulario2 .linha-receita {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.container .formulario2 .rendimento {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.container .formulario2 .rendimento label {
-  margin-top: 25px;
-}
-
-.container .formulario2 .rendimento input {
-  width: 170px;
-}
-
-.container .formulario2 .porccionar {
+.container .formulario .porccionar {
   width: 280px;
   height: 70px;
-  margin-top: 45px;
   background: url(./img/logoButton.svg) no-repeat center;
   background-color: #E86464;
   color: #ecda2c;
@@ -193,7 +149,7 @@ button {
   border: none;
 }
 
-.container .formulario2 .porccionar:hover {
+.container .formulario .porccionar:hover {
   background-color: #d05a5a;
 }
 
