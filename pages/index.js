@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 
 // Components:
@@ -46,11 +46,11 @@ export default function Home() {
           <h1 className="subtitulo">Calcule e produza suas receitas</h1>
         </header>
         <main>
+          <p className="descricao">
+            Quer adaptar aquela receita deliciosa para servir vários amigos ou somente para um jantar a dois? Com o <strong>Porccionne</strong> você consegue. <br></br> Cole sua receita, escolha o número de porções e bon appétit!
+          </p>
           <form id="form1" onSubmit={handleFormReceita} >
-            <div className="formulario1">
-              <p>
-                Quer adaptar aquela receita deliciosa para servir vários amigos ou somente para um jantar a dois? Com o <strong>Porccionne</strong> você consegue. <br></br> Cole sua receita, escolha o número de porções e bon appétit!
-              </p>
+            <div className="formulario">
               <div className="textarea-input">
                 <textarea
                   placeholder="Cole sua receita aqui"
@@ -63,22 +63,14 @@ export default function Home() {
                   value={receita}
                   onChange={e => setReceita(e.target.value)}
                 />
-                {/* <button type="submit" className="continuar">Continuar</button> */}
               </div>
-            </div>
-            <div className="formulario2" >
-              {/* <div className="linha-receita">
-                <input type="number" name="quantidade" id="quantidade" min="1" max="100000" />
-                <input type="text" id="unidade" />
-                <input type="text" id="ingrediente" />
-              </div> */}
               <div className="rendimento">
                 <label htmlFor="rende">Quanto a receita rende:</label>
-                <input type="number" value={rende} name="rende" id="rende" min="1" max="1000" required onChange={e => setRende(e.target.value)}/>
+                <input type="number" value={rende} name="rende" id="rende" min="1" max="1000" required onChange={e => setRende(e.target.value)} />
                 <label htmlFor="vairender">Quanto ela deve render:</label>
-                <input type="number" value={vaiRender} name="vairender" id="vairender" min="1" max="1000" required onChange={e => setVaiRender(e.target.value)}/>
-              </div>
-              <button type="submit" className="porccionar" form="form1"></button>
+                <input type="number" value={vaiRender} name="vairender" id="vairender" min="1" max="1000" required onChange={e => setVaiRender(e.target.value)} />
+                <button type="submit" className="porccionar" form="form1"></button>
+              </div>  
             </div>
           </form>
           {resultado}
