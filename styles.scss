@@ -22,6 +22,7 @@ textarea {
     resize: none;
     outline: none;
     padding: 10px;
+    margin: 0;
     border: none;
     border-radius: 10px;
 }
@@ -55,98 +56,66 @@ button {
             font-weight: 400;
         }
     }
-    .formulario1 {
-        display: flex;
-        flex-wrap: wrap;
-
-        justify-content: center;
-        
-        p{
-            max-width: 280px;
-            margin: 0 30px;
-            margin-bottom: 30px;
-            padding: 10px;
+    .descricao {
+        max-width: 654px;
+        margin: 0 30px;
+        margin-bottom: 30px;
+        padding: 10px;
             
-            border: 1px solid;
-            border-radius: 10px;
-            
-            
-        }
-
-        .textarea-input {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-
-            @media (max-width:628px) {
-                align-items: center;    
-            }
-
-            textarea {
-                height: 300px;
-            }
-
-            .continuar {
-                width: 105px;
-                height: 45px;
-                margin-top: 45px;
-
-                background-color: #FFF;
-                font-size: 18px;
-                border-radius: 10px;
-                border: none;
-                cursor: pointer;
-
-                transition-duration: 0.4s;
-
-            }
-
-            .continuar:hover {
-                background-color: $yellowporccionne;
-            }
-        }
+        border: 1px solid;
+        border-radius: 10px;
+    
     }
-
-    .formulario2 {
-        margin-top: 25px;
+    
+    .formulario {
+        max-width: 654px;
         display: flex;
         flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-
-        input {
-            height: 45px;
-            outline: none;
-            border-radius: 10px;
-            border: 1px solid #EEE;
-            margin: 5px;
-            font-size: 18px;
-            text-align: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        min-height: 280px;
+        @media (max-width: 700px) {
+            
+            textarea {
+                margin: 0 10px;
+                min-height: 300px;
+            }
+            .rendimento {
+                margin: 0 10px;
+                min-height: 300px;
+                margin-top: 20px;
+            }
         }
 
-        .linha-receita {
-            display: flex;
+        @media (max-width: 609px) {
             justify-content: center;
-            flex-wrap: wrap;
         }
 
+        textarea {
+            min-height: 100%;
+        }
+        
         .rendimento {
             display: flex;
             flex-direction: column;
-
-            label {
-                margin-top: 25px;
-            }
+            align-items: center;
+            justify-content: space-between;
         }
 
         .rendimento input {
             width: 170px;
+            height: 45px;
+            outline: none;
+            border-radius: 10px;
+            border: 1px solid #EEE;
+            font-size: 18px;
+            text-align: center;
+        
         }
 
         .porccionar {
             width: 280px;
             height: 70px;
-            margin-top: 45px;
 
             background: url(./img/logoButton.svg) no-repeat center;
             background-color: $redporccionne;
