@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 // Components:
 import ResultadoBox from '../components/resultado';
@@ -39,6 +40,7 @@ export default function Home() {
           />
           <meta name="robots" content="index, follow" />
           <meta name="google-site-verification" content="So7SQcaOQN7J0n4OJtIkzjYq09TJqFj40y-MUhIoXpQ" />
+          <link rel="icon" type="image/png" href={require('../img/favicon.png')} />
           <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"></link>
         </Head>
         <header className="header">
@@ -47,7 +49,7 @@ export default function Home() {
         </header>
         <main>
           <p className="descricao">
-            Quer adaptar aquela receita deliciosa para servir vários amigos ou somente para um jantar a dois? Com o <strong>Porccionne</strong> você consegue. <br></br> Cole sua receita, escolha o número de porções e bon appétit!
+            Quer adaptar aquela receita deliciosa para servir vários amigos ou somente para um jantar a dois? Com o <strong>Porccionne!</strong> você consegue. <br></br> Cole sua receita, escolha o número de porções e bon appétit!
           </p>
           <form id="form1" onSubmit={handleFormReceita} >
             <div className="formulario">
@@ -65,12 +67,16 @@ export default function Home() {
                 />
               </div>
               <div className="rendimento">
-                <label htmlFor="rende">Quanto a receita rende:</label>
-                <input type="number" value={rende} name="rende" id="rende" min="1" max="1000" required onChange={e => setRende(e.target.value)} />
-                <label htmlFor="vairender">Quanto ela deve render:</label>
-                <input type="number" value={vaiRender} name="vairender" id="vairender" min="1" max="1000" required onChange={e => setVaiRender(e.target.value)} />
+                <div className="div-rende">
+                  <label htmlFor="rende">Quanto a receita rende:</label>
+                  <input type="number" value={rende} name="rende" id="rende" min="1" max="1000" required onChange={e => setRende(e.target.value)} />
+                </div>
+                <div className="div-rende">
+                  <label htmlFor="vairender">Quanto ela deve render:</label>
+                  <input type="number" value={vaiRender} name="vairender" id="vairender" min="1" max="1000" required onChange={e => setVaiRender(e.target.value)} />
+                </div>
                 <button type="submit" className="porccionar" form="form1"></button>
-              </div>  
+              </div>
             </div>
           </form>
           {resultado}
@@ -79,6 +85,6 @@ export default function Home() {
       <footer className="footer">
         <p>Copyrigth © 2020 - Porccionne</p>
       </footer>
-    </div>
+    </div >
   )
 }

@@ -51,7 +51,7 @@ button {
         }
 
         .subtitulo {
-            margin-top: 30px;
+            margin-top: 20px;
             font-size: 2em;
             font-weight: 400;
         }
@@ -82,7 +82,7 @@ button {
             }
             .rendimento {
                 margin: 0 10px;
-                min-height: 300px;
+                min-height: 280px;
                 margin-top: 20px;
             }
         }
@@ -100,6 +100,14 @@ button {
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
+
+            .div-rende {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+            }
         }
 
         .rendimento input {
@@ -114,8 +122,8 @@ button {
         }
 
         .porccionar {
-            width: 280px;
-            height: 70px;
+            width: 240px;
+            height: 60px;
 
             background: url(./img/logoButton.svg) no-repeat center;
             background-color: $redporccionne;
@@ -168,7 +176,7 @@ button {
     text-align: center;
 
     background-color: $yellowporccionne;
-    margin-top: 20px;
+    margin-top: 30px;
 
     display: flex;
     justify-content: center;
