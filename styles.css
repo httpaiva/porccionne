@@ -26,22 +26,15 @@ button {
   outline: none;
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+button:hover {
+  cursor: pointer;
 }
 
-.container .header {
+.clicavel {
+  cursor: pointer;
+}
+
+.header {
   margin: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -55,15 +48,30 @@ button {
           align-items: center;
 }
 
-.container .header .logo {
+.header .logo {
   max-width: 100%;
 }
 
-.container .header .subtitulo {
+.header .subtitulo {
   margin-top: 20px;
   font-size: 2em;
   font-weight: 400;
   text-align: center;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container .descricao {
@@ -218,5 +226,43 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.footer p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.container2 {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container2 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container2 main .card {
+  width: 250px;
+  height: 350px;
+  margin: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=styles.css.map */
