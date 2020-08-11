@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Footer from '../components/footer';
 
 export default function Creditos() {
     return (
@@ -81,9 +82,7 @@ export default function Creditos() {
                     </div>
                 </main>
             </div>
-            <footer className="footer">
-                <Link href="/creditos"><p>Copyrigth © 2020 - Porccionne</p></Link>
-            </footer>
+            <Footer/>
         </div>
     );
 }
