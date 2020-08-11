@@ -20,7 +20,7 @@ export default function Creditos() {
                                 </div>
                             </div>
                             <div className="card back">
-                                <p>Github</p>
+                                <a href="https://github.com/theOlldboy" target="_blank">Github</a>
                             </div>
                         </div>
                     </div>
@@ -33,7 +33,7 @@ export default function Creditos() {
                                 </div>
                             </div>
                             <div className="card back">
-                                <p>Behance</p>
+                                <a href="https://www.behance.net/joaobrum" target="_blank">Behance</a>
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@ export default function Creditos() {
                                 </div>
                             </div>
                             <div className="card back">
-                                <p>Github</p>
+                                <a href="https://github.com/gabriel-paiva" target="_blank">Github</a>
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@ export default function Creditos() {
                                 </div>
                             </div>
                             <div className="card back">
-                                <p>Github</p>
+                                <a href="https://github.com/murilogds" target="_blank">Github</a>
                             </div>
                         </div>
                     </div>
@@ -75,7 +75,7 @@ export default function Creditos() {
                                 </div>
                             </div>
                             <div className="card back">
-                                <p>Github</p>
+                                <a href="https://github.com/eliseukadesh67" target="_blank">Github</a>
                             </div>
                         </div>
                     </div>

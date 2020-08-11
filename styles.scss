@@ -235,9 +235,9 @@ button:hover {
                     position: absolute;
                     backface-visibility: hidden;
 
-                    p {
-                        text-align: center;
-                        font-size: 22px;
+                    a {
+                        color: #000;
+                        text-decoration: none;
                     }
                     
                 }
@@ -245,7 +245,9 @@ button:hover {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
+                    text-align: center;
                     align-items: center;
+                    font-size: 22px;
                     
                     h2 {
                         font-size: 60px;
@@ -259,6 +261,8 @@ button:hover {
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+
+                    font-size: 22px;
 
                     background-color: $yellowporccionne;
                     color: #000;
