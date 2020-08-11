@@ -16,13 +16,16 @@ export default function Home() {
   const [vaiRender, setVaiRender] = useState(0);
   const [resultado, setResultado] = useState('');
 
-  function handleFormReceita(e) {
+  async function handleFormReceita(e) {
     e.preventDefault();
 
-    const receitaSeparada = splitText(receita);
-    const receitaCalculada = calculo(receitaSeparada, rende, vaiRender);
-    const texto = montaReceita(receitaCalculada);
-    setResultado(<ResultadoBox text={texto} />);
+    const receitaSeparada = await splitText(receita);
+    const receitaCalculada = await calculo(receitaSeparada, rende, vaiRender);
+    const texto = await montaReceita(receitaCalculada);
+    await setResultado(<ResultadoBox text={texto} />);
+
+    document.getElementById("resultado").scrollIntoView({behavior: 'smooth'});
+
   }
 
   return (
