@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 // Components:
 import ResultadoBox from '../components/resultado';
+import Footer from '../components/footer';
 //Functions:
 import splitText from '../utils/SplitText';
 import calculo from '../utils/Calculo';
@@ -85,9 +86,7 @@ export default function Home() {
           {resultado}
         </main>
       </div >
-      <footer className="footer">
-        <Link href="/creditos"><p>Copyrigth © 2020 - Porccionne</p></Link>
-      </footer>
+      <Footer/>
     </div >
   )
 }
