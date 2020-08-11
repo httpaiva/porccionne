@@ -168,6 +168,7 @@ button:hover {
             min-height: 50px;
             max-width: 500px;
             background-color: $yellowporccionne;
+            background-image: url('./img/resultado.svg');
             border-radius: 20px;
 
             color: #000;
@@ -187,6 +188,7 @@ button:hover {
     text-align: center;
 
     background-color: $yellowporccionne;
+    background-image: url('./img/footer.svg');
     margin-top: 30px;
 
     display: flex;
@@ -239,6 +241,9 @@ button:hover {
                         color: #000;
                         text-decoration: none;
                     }
+                    a:hover {
+                        text-decoration: underline;
+                    }
                     
                 }
                 .front {
@@ -265,8 +270,9 @@ button:hover {
                     font-size: 22px;
 
                     background-color: $yellowporccionne;
+                    background-image: url('./img/card.svg');
                     color: #000;
-                    border-color: transparent;
+                    border-color: $yellowporccionne;
                 }
             }
             .flipper:hover {

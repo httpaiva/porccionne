@@ -203,6 +203,7 @@ button:hover {
   min-height: 50px;
   max-width: 500px;
   background-color: #ecda2c;
+  background-image: url("./img/resultado.svg");
   border-radius: 20px;
   color: #000;
   text-align: center;
@@ -216,6 +217,7 @@ button:hover {
   bottom: 0;
   text-align: center;
   background-color: #ecda2c;
+  background-image: url("./img/footer.svg");
   margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -294,6 +296,10 @@ button:hover {
   text-decoration: none;
 }
 
+.container2 main .card-container .flipper .card a:hover {
+  text-decoration: underline;
+}
+
 .container2 main .card-container .flipper .front {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -335,8 +341,9 @@ button:hover {
           align-items: center;
   font-size: 22px;
   background-color: #ecda2c;
+  background-image: url("./img/card.svg");
   color: #000;
-  border-color: transparent;
+  border-color: #ecda2c;
 }
 
 .container2 main .card-container .flipper:hover {
