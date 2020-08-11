@@ -26,22 +26,15 @@ button {
   outline: none;
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+button:hover {
+  cursor: pointer;
 }
 
-.container .header {
+.clicavel {
+  cursor: pointer;
+}
+
+.header {
   margin: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -55,14 +48,30 @@ button {
           align-items: center;
 }
 
-.container .header .logo {
+.header .logo {
   max-width: 100%;
 }
 
-.container .header .subtitulo {
+.header .subtitulo {
   margin-top: 20px;
   font-size: 2em;
   font-weight: 400;
+  text-align: center;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container .descricao {
@@ -184,6 +193,7 @@ button {
   margin-top: 50px;
   font-size: 2em;
   font-weight: 400;
+  text-align: center;
   color: #ecda2c;
 }
 
@@ -193,6 +203,7 @@ button {
   min-height: 50px;
   max-width: 500px;
   background-color: #ecda2c;
+  background-image: url("./img/resultado.svg");
   border-radius: 20px;
   color: #000;
   text-align: center;
@@ -206,6 +217,8 @@ button {
   bottom: 0;
   text-align: center;
   background-color: #ecda2c;
+  background-image: url("./img/footer.svg");
+
   margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -216,5 +229,126 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.footer p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.container2 {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1000px;
+}
+
+.container2 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container2 main .card-container {
+  width: 250px;
+  height: 350px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  margin: 5px;
+}
+
+.container2 main .card-container .flipper {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative;
+}
+
+.container2 main .card-container .flipper .card {
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.container2 main .card-container .flipper .card a {
+  color: #000;
+  text-decoration: none;
+}
+
+.container2 main .card-container .flipper .card a:hover {
+  text-decoration: underline;
+}
+
+.container2 main .card-container .flipper .front {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 22px;
+}
+
+.container2 main .card-container .flipper .front h2 {
+  font-size: 60px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.container2 main .card-container .flipper .back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 22px;
+  background-color: #ecda2c;
+  background-image: url("./img/card.svg");
+  color: #000;
+  border-color: #ecda2c;
+}
+
+.container2 main .card-container .flipper:hover {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 /*# sourceMappingURL=styles.css.map */

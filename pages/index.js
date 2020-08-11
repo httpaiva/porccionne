@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 // Components:
 import ResultadoBox from '../components/resultado';
+import Footer from '../components/footer';
 //Functions:
 import splitText from '../utils/SplitText';
 import calculo from '../utils/Calculo';
@@ -16,13 +17,16 @@ export default function Home() {
   const [vaiRender, setVaiRender] = useState(0);
   const [resultado, setResultado] = useState('');
 
-  function handleFormReceita(e) {
+  async function handleFormReceita(e) {
     e.preventDefault();
 
-    const receitaSeparada = splitText(receita);
-    const receitaCalculada = calculo(receitaSeparada, rende, vaiRender);
-    const texto = montaReceita(receitaCalculada);
-    setResultado(<ResultadoBox text={texto} />);
+    const receitaSeparada = await splitText(receita);
+    const receitaCalculada = await calculo(receitaSeparada, rende, vaiRender);
+    const texto = await montaReceita(receitaCalculada);
+    await setResultado(<ResultadoBox text={texto} />);
+
+    document.getElementById("resultado").scrollIntoView({ behavior: 'smooth' });
+
   }
 
   return (
@@ -44,7 +48,7 @@ export default function Home() {
           <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"></link>
         </Head>
         <header className="header">
-          <img className="logo" src={require('../img/logo.svg')} alt="Porccionne Logo" />
+          <Link href="/"><img className="logo clicavel" src={require('../img/logo.svg')} alt="Porccionne Logo" /></Link>
           <h1 className="subtitulo">Calcule e produza suas receitas</h1>
         </header>
         <main>
@@ -82,9 +86,7 @@ export default function Home() {
           {resultado}
         </main>
       </div >
-      <footer className="footer">
-        <p>Copyrigth © 2020 - Porccionne</p>
-      </footer>
+      <Footer/>
     </div >
   )
 }
