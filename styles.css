@@ -63,6 +63,7 @@ button {
   margin-top: 20px;
   font-size: 2em;
   font-weight: 400;
+  text-align: center;
 }
 
 .container .descricao {
@@ -184,6 +185,7 @@ button {
   margin-top: 50px;
   font-size: 2em;
   font-weight: 400;
+  text-align: center;
   color: #ecda2c;
 }
 
