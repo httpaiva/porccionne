@@ -206,18 +206,68 @@ button:hover {
     flex-direction: column;
     align-items: center;
 
+    max-width: 1000px;
+
     main {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
 
-        .card {
+        .card-container {
             width: 250px;
             height: 350px;
-            margin: 10px;
-    
-            border: 1px solid white;
-            border-radius: 10px;
+            perspective: 1000px;
+
+            margin: 5px;
+
+            .flipper {
+                width: 100%;
+                height: 100%;
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+                position: relative;
+                
+                .card {
+                    border: 1px solid white;
+                    border-radius: 10px;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    backface-visibility: hidden;
+
+                    p {
+                        text-align: center;
+                        font-size: 22px;
+                    }
+                    
+                }
+                .front {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    
+                    h2 {
+                        font-size: 60px;
+                        font-weight: 400;
+                        text-align: center;
+                    }
+                }
+                .back {
+                    transform: rotateY(180deg);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    background-color: $yellowporccionne;
+                    color: #000;
+                    border-color: transparent;
+                }
+            }
+            .flipper:hover {
+                transform: rotateY(180deg);
+            }
         }
     }
 }
