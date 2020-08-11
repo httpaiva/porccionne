@@ -289,9 +289,9 @@ button:hover {
           backface-visibility: hidden;
 }
 
-.container2 main .card-container .flipper .card p {
-  text-align: center;
-  font-size: 22px;
+.container2 main .card-container .flipper .card a {
+  color: #000;
+  text-decoration: none;
 }
 
 .container2 main .card-container .flipper .front {
@@ -304,9 +304,11 @@ button:hover {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 22px;
 }
 
 .container2 main .card-container .flipper .front h2 {
@@ -331,6 +333,7 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 22px;
   background-color: #ecda2c;
   color: #000;
   border-color: transparent;
