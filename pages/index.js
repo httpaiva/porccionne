@@ -24,7 +24,7 @@ export default function Home() {
     const texto = await montaReceita(receitaCalculada);
     await setResultado(<ResultadoBox text={texto} />);
 
-    document.getElementById("resultado").scrollIntoView({behavior: 'smooth'});
+    document.getElementById("resultado").scrollIntoView({ behavior: 'smooth' });
 
   }
 
@@ -47,7 +47,7 @@ export default function Home() {
           <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"></link>
         </Head>
         <header className="header">
-          <img className="logo" src={require('../img/logo.svg')} alt="Porccionne Logo" />
+          <Link href="/"><img className="logo clicavel" src={require('../img/logo.svg')} alt="Porccionne Logo" /></Link>
           <h1 className="subtitulo">Calcule e produza suas receitas</h1>
         </header>
         <main>
@@ -86,7 +86,7 @@ export default function Home() {
         </main>
       </div >
       <footer className="footer">
-        <p>Copyrigth © 2020 - Porccionne</p>
+        <Link href="/creditos"><p>Copyrigth © 2020 - Porccionne</p></Link>
       </footer>
     </div >
   )
