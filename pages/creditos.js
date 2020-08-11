@@ -14,7 +14,7 @@ export default function Creditos() {
                     <div className="card-container">
                         <div className="flipper">
                             <div className="card front">
-                                <h2 className="nome">Matheus Gomes</h2>
+                                <h2 className="nome">Matheus Rabelo</h2>
                                 <div className="funcao">
                                     <p>Idealizador</p>
                                     <p>Desenvolvedor</p>
