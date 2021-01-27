@@ -30,6 +30,11 @@ button:hover {
   cursor: pointer;
 }
 
+div#__next, .wrapper {
+  width: 100%;
+  height: 100vh;
+}
+
 .clicavel {
   cursor: pointer;
 }
@@ -199,6 +204,7 @@ button:hover {
 
 .container .resultado-container .resultado {
   margin: 30px 10px;
+  margin-bottom: 50px;
   min-width: 350px;
   min-height: 50px;
   max-width: 500px;
@@ -214,11 +220,11 @@ button:hover {
   width: 100%;
   height: 40px;
   color: #000;
+  position: fixed;
   bottom: 0;
   text-align: center;
   background-color: #ecda2c;
   background-image: url("./img/footer.svg");
-
   margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
